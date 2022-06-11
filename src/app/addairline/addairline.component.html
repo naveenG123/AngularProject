@@ -1,0 +1,54 @@
+<!-- <p>addairline works!</p> -->
+<br>
+<section class="vh-100 ">
+    <div class="container h-100" >
+        <div class="row justify-content-center ">
+
+            
+            <div class="col-12 col-md-8 col-lg-6 col-xl-6 " >
+                <div class="row py-5"></div>
+                <div class="row">
+                    <div class="col text-center">
+                        <h2 style="background-color: coral;">Register Airline</h2>
+                        <p class="text-h3"></p>
+                    </div>
+                </div>
+                <div class="row align-items-center">
+                    <div class="col mt-4">
+                        <input type="text" class="form-control" [(ngModel)]="airlineData.AirlineNo"placeholder="Airline Number">
+                    </div>
+                </div>
+                <div class="row align-items-center mt-4">
+                    <div class="col">
+                        <input type="text" class="form-control" [(ngModel)]="airlineData.Logo" placeholder="Upload Logo">
+                    </div>
+                </div>
+                <div class="row align-items-center mt-4">
+                    <div class="col">
+                        <input type="text" class="form-control"   [(ngModel)]="airlineData.AirlineName"  placeholder="Airline Names">
+                    </div>
+                    <div class="col">
+                        <input type="text" class="form-control"  [(ngModel)]="airlineData.Address"  placeholder="Contact Address">
+                    </div>
+                    <div class="col">
+                        <input type="text" class="form-control"  [(ngModel)]="airlineData.status"  placeholder="Airline Status">
+                    </div>
+                </div>   
+                <br> 
+                <div class="row align-items-center mt-6">          
+                <div class="col">
+                    <button type="submit" class="btn btn-primary btn-lg"
+                    style=" padding: auto;width: 95%;"(click)="addAirline(airlineData)">Add New Airlines</button>                    
+                </div>
+                <div class=" col">
+                    <button type="submit"  class="btn btn-success btn-lg" style=" padding: auto;width: 100%;"
+                    (click)="deleteAirline(airlineData)">Block</button>
+                    <!-- <button type="submit" class="btn btn-primary btn-lg"
+                        style="padding-left: 1.0rem; padding-right: 1.5rem;" (click)="deleteAirline(airlineData)">Add New Airlines</button>                     -->
+                </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>

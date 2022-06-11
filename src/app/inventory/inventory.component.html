@@ -1,0 +1,59 @@
+<p>inventory works!</p>
+<div class="py-5">
+    <div class="container-fluid py-2"> 
+        <div class="row ">
+        <div class="col text-center" style="padding-top: 30px!important;">
+            <h2  style="background-color: coral;">Inventory</h2>            
+        </div>
+        </div>       
+    </div>
+    <div class="container  table-bordered-1" >
+        <div class="row">
+            <div class="col-12">
+                <button type="submit" class="btn btn-success btn-lg align-items-center"
+                    style="padding-left: 2.5rem; padding-right: 2.5rem;" (click)="getAllInventory()">Add</button>
+            </div>
+        </div>
+        <div class="table-responsive " style="padding-top: 15px;">
+            <table id="dtDynamicVerticalScrollExample" class="table table-striped table-bordered table-sm"
+                cellspacing="0" width="100%">
+                <thead class="bg-info">
+                    <tr>
+                       
+                        <th class="th-sm"><h4>FlightNo</h4></th>
+                        <th class="th-sm"><h4>FromPlace</h4></th>
+                        <th class="th-sm"><h4>ToPlace</h4></th>
+                        <th class="th-sm"><h4>StartDateTime</h4></th>
+                        <th class="th-sm"><h4>EndDateTime</h4></th>                    
+                        <th class="th-sm"><h4>BusinessClassSeat</h4></th>
+                        <th class="th-sm"><h4>NonBusinessClassSeat</h4></th>
+                        <th class="th-sm"><h4>Price</h4></th>
+                        <th class="th-sm"><h4>NoOfRows</h4></th>
+                        <th class="th-sm"><h4>Meal</h4></th>
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngIf="IsError">
+                        <td colspan="12"><h5>{{errorRes}}</h5></td>
+                    </tr>
+                    <tr *ngFor="let detail of inventoryModellist;index as i">
+                        <td>{{detail.FlightNo}}</td>
+                        <td>{{detail.FromPlace}}</td>
+                        <td>{{detail.ToPlace}}</td>
+                        <td>{{detail.StartDateTime}} </td>
+                        <td> {{detail.EndDateTime}} </td>
+                        <td> {{detail.BusinessClassSeat}} </td>
+                        <td> {{detail.NonBusinessClassSeat}} </td>
+                        <td> {{detail.Price}} </td>
+                        <td> {{detail.NoOfRows}} </td>
+                        <td> {{detail.Meal}} </td>
+                                            
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+       
+    </div>
+   
+</div>

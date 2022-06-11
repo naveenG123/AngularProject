@@ -1,0 +1,16 @@
+@media (min-width: 1200px)
+ {
+   .h4 , h4{
+    font-size: 20px;
+   }
+    
+}
+
+.container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+    width: 90%;
+    padding-right: var(--bs-gutter-x,.75rem);
+    padding-left: var(--bs-gutter-x,.75rem);
+    margin-right: auto;
+    margin-left: auto;
+}
+
